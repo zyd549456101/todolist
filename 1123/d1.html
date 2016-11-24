@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+<div ng-controller="demo">
+    {{username}}
+</div>
+<script>
+    var app=angular.module("myApp",[]);
+    app.controller('demo',function ($scope) {
+        var member=['tom','peter','jack'];
+        angular.forEach(member,function (data,index) {
+            /*angular.forEach 要循环的数组或对象*/
+            /*data 数组的元素*/
+            /*index 元素的索引值*/
+            console.log(data);
+            console.log(index);
+        });
+    });
+</script>
+</body>
+</html>
